@@ -7,7 +7,9 @@
   <link rel="stylesheet" href="/mdblog.rs/static/main.css">
   
 
-  <title>introduction to mdblog</title>
+  
+<title>introduction to mdblog</title>
+
 </head>
 <body>
 <header class="clearfix">
@@ -86,7 +88,7 @@ OPTIONS:
 </code></pre>
 <p>blog directory(<code>myblog</code>) layout is initialized:</p>
 <pre><code>myblog
-├── Config.toml
+├── config.toml
 ├── media
 ├── posts
 │   ├── hello.md
@@ -94,7 +96,7 @@ OPTIONS:
 └── _themes
 </code></pre>
 <ul>
-<li><code>Config.toml</code>: blog config file</li>
+<li><code>config.toml</code>: blog config file</li>
 <li><code>media</code>: blog media directory</li>
 <li><code>posts</code>: blog posts directory</li>
 <li><code>posts/hello.md</code>: a markdown style post</li>
@@ -106,7 +108,7 @@ $ mdblog build
 </code></pre>
 <p>the blog static files are build into the subdir <code>_build</code>, the current blog directory(<code>myblog</code>) layout is:</p>
 <pre><code>myblog
-├── Config.toml
+├── config.toml
 ├── media
 ├── posts
 │   ├── hello.md
@@ -129,14 +131,16 @@ and re-generate your static-site when you add or change content,</p>
 <p>a new markdown file <code>posts/another.md</code> is created,
 you can edit it for the new post.</p>
 <p>refresh the index page, you will find the new post.</p>
-<h1>Config.toml</h1>
+<h1>config.toml</h1>
 <pre><code class="language-toml">theme = &quot;simple&quot;
 site_name = &quot;Mdblog&quot;
 site_motto = &quot;Simple is Beautiful!&quot;
 footer_note = &quot;Keep It Simple, Stupid!&quot;
+media_dir = &quot;media&quot;
 build_dir = &quot;_build&quot;
+theme_root_dir = &quot;_theme&quot;
 rebuild_interval = 2
-url_prefix = &quot;&quot;
+url_prefix = &quot;/mdblog.rs&quot;
 </code></pre>
 
 
