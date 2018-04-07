@@ -1,42 +1,24 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="generator" content="mdblog.rs">
-  <link rel="icon" href="/mdblog.rs/static/favicon.png">
-  <link rel="stylesheet" href="/mdblog.rs/static/main.css">
-  
-
-  
-<title>introduction to mdblog</title>
-
-</head>
-<body>
-<header class="clearfix">
-  <section id="imglogo">
-    <a href="/mdblog.rs/index.html" title="Mdblog">
-    <img src="/mdblog.rs/static/logo.png"></a>
-  </section>
-
-  <section id="textlogo">
-    <h1 id="site-name">
-      <a href="/mdblog.rs/index.html" title="Mdblog">Mdblog</a>
-    </h1>
-    <h2 id="site-motto">Simple is Beautiful!</h2>
-  </section>
-
-  <nav>
-    <ul>
-      <li><a href="/mdblog.rs/index.html">Blog</a></li>
-    </ul>
-  </nav>
-</header>
-<div id="container" class="clearfix">
-  <main>
-    
-    <h1>introduction to mdblog</h1>
-    <article>
-      <h1>Mdblog</h1>
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://fugangqiang.github.io/mdblog.rs</id>
+  <title>Mdblog Demo Site</title>
+  <updated>2018-04-07T15:39:05+08:00</updated>
+  <subtitle>Simple is Beautiful!</subtitle>
+  <icon>/static/favicon.png</icon>
+  <logo>/static/logo.png</logo>
+  <link rel="alternate" type="text/html" href="https://fugangqiang.github.io/mdblog.rs" />
+  <link rel="self" type="application/atom+xml" href="https://fugangqiang.github.io/mdblog.rs/atom.xml" />
+  <generator uri="https://github.com/FuGangqiang/mdblog.rs">mdblog.rs</generator>
+  <entry>
+    <id>https://fugangqiang.github.io/mdblog.rs/posts/introduction%20to%20mdblog.html</id>
+    <title>introduction to mdblog</title>
+    <updated>2018-03-28T23:48:56+08:00</updated>
+    <published>2018-03-28T23:48:56+08:00</published>
+    <link href="https://fugangqiang.github.io/mdblog.rs/posts/introduction%20to%20mdblog.html"/>
+    <summary># Mdblog...</summary>
+    <content type="html" xml:lang="en" xml:base="https://fugangqiang.github.io/mdblog.rs">
+        <![CDATA[
+        <h1>Mdblog</h1>
 <p><code>mdblog</code> is a static site generator from markdown files with features:</p>
 <ul>
 <li>TeX style math support</li>
@@ -132,79 +114,74 @@ and re-generate your static-site when you add or change content,</p>
 you can edit it for the new post.</p>
 <p>refresh the index page, you will find the new post.</p>
 <h1>config.toml</h1>
-<pre><code class="language-toml">theme = &quot;simple&quot;
+<pre><code class="language-toml">site_url = &quot;&quot;
 site_name = &quot;Mdblog&quot;
 site_motto = &quot;Simple is Beautiful!&quot;
 footer_note = &quot;Keep It Simple, Stupid!&quot;
 media_dir = &quot;media&quot;
 build_dir = &quot;_build&quot;
-theme_root_dir = &quot;_theme&quot;
+theme = &quot;simple&quot;
+theme_root_dir = &quot;_themes&quot;
 rebuild_interval = 2
-url_prefix = &quot;/mdblog.rs&quot;
+posts_per_page = 20
 </code></pre>
 
-
-      <ul id="article_footer">
-        
-           <li>tags: <a href="/mdblog.rs/blog/tags/blog.html">blog<sup>1</sup></a></li>
-        
-        <li>date: 2018-03-28 23:48:56</li>
-      </ul>
-    </article>
-
-  </main>
-
-  <aside>
-    <section class="tags clearfix">
-      <h1>Tags</h1>
-      <ul>
-      
-        <li><a href="/mdblog.rs/blog/tags/blog.html">blog<sup>1</sup></a></li>
-      
-        <li><a href="/mdblog.rs/blog/tags/hello.html">hello<sup>2</sup></a></li>
-      
-        <li><a href="/mdblog.rs/blog/tags/math.html">math<sup>1</sup></a></li>
-      
-        <li><a href="/mdblog.rs/blog/tags/world.html">world<sup>1</sup></a></li>
-      
-      </ul>
-    </section>
-
-    <section class="links clearfix">
-      <h1>Links</h1>
-      <ul>
-        <li><a href="/mdblog.rs/index.html" target="_blank">Blog</a></li>
-      </ul>
-    </section>
-  </aside>
+        ]]>
+    </content>
+  </entry><entry>
+    <id>https://fugangqiang.github.io/mdblog.rs/posts/math.html</id>
+    <title>math</title>
+    <updated>2000-01-01T00:00:00+08:00</updated>
+    <published>2000-01-01T00:00:00+08:00</published>
+    <link href="https://fugangqiang.github.io/mdblog.rs/posts/math.html"/>
+    <summary>This is a beautiful math test....</summary>
+    <content type="html" xml:lang="en" xml:base="https://fugangqiang.github.io/mdblog.rs">
+        <![CDATA[
+        <p>This is a beautiful math test.</p>
+<h2>inline style</h2>
+<p>Einstein produced <span>$E=mc^2$</span> from his special relativity equations.</p>
+<h2>display style</h2>
+<p>The quadratic formula for the roots of the general quadratic equation:</p>
+<div>
+$$
+x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}
+$$
 </div>
+<p>matrices:</p>
+<div>
+$$
+\left[\begin{array}{ccc}
+   a_{11} & a_{12} & a_{13} \\
+   a_{21} & a_{22} & a_{23} \\
+   a_{31} & a_{32} & a_{33} \\
+\end{array}\right]
+\left[\begin{array}{c}
+   x_1 \\
+   x_2 \\
+   x_3 \\
+\end{array}\right]
+=
+\left[\begin{array}{c}
+   b_1 \\
+   b_2 \\
+   b_3 \\
+\end{array}\right]
+$$
+</div>
+        ]]>
+    </content>
+  </entry><entry>
+    <id>https://fugangqiang.github.io/mdblog.rs/posts/hello.html</id>
+    <title>hello</title>
+    <updated>1970-01-01T00:00:00+08:00</updated>
+    <published>1970-01-01T00:00:00+08:00</published>
+    <link href="https://fugangqiang.github.io/mdblog.rs/posts/hello.html"/>
+    <summary>hello world!...</summary>
+    <content type="html" xml:lang="en" xml:base="https://fugangqiang.github.io/mdblog.rs">
+        <![CDATA[
+        <p>hello world!</p>
 
-<footer>
-  <p>
-    Keep It Simple, Stupid!
-  </p>
-</footer>
-
-<script src="/mdblog.rs/static/main.js"></script>
-<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-       tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-       },
-       TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
-       "HTML-CSS": {linebreaks: {automatic: true}},
-       SVG: {linebreaks: {automatic: true}}
-    });
-    MathJax.Hub.Queue(function() {
-       var all = MathJax.Hub.getAllJax(), i;
-       for(i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-       }
-    });
-</script>
-
-</body>
-</html>
+        ]]>
+    </content>
+  </entry>
+</feed>

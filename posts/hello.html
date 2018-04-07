@@ -5,7 +5,7 @@
   <meta name="generator" content="mdblog.rs">
   <link rel="icon" href="https://fugangqiang.github.io/mdblog.rs/static/favicon.png">
   <link rel="stylesheet" href="https://fugangqiang.github.io/mdblog.rs/static/main.css">
-  <title>Mdblog Demo Site</title>
+  <title>hello</title>
 </head>
 <body>
 <header class="clearfix">
@@ -27,21 +27,15 @@
 </header>
 <div id="container" class="clearfix">
   <main>
-  <article>
-    <section>
-      <span>2018-03-28</span>
-      <span><a href="https://fugangqiang.github.io/mdblog.rs/posts/introduction%20to%20mdblog.html">introduction to mdblog</a></span>
-    </section>
-    <section>
-      <span>2000-01-01</span>
-      <span><a href="https://fugangqiang.github.io/mdblog.rs/posts/math.html">math</a></span>
-    </section>
-    <section>
-      <span>1970-01-01</span>
-      <span><a href="https://fugangqiang.github.io/mdblog.rs/posts/hello.html">hello</a></span>
-    </section>
-  </article>
-  <div id="pages"></div>
+    <h1>hello</h1>
+    <article>
+      <p>hello world!</p>
+
+      <ul id="article_footer">
+        <li>tags: <a href="https://fugangqiang.github.io/mdblog.rs/tags/hello.html">hello<sup>2</sup></a><a href="https://fugangqiang.github.io/mdblog.rs/tags/world.html">world<sup>1</sup></a></li>
+      <li>date: 1970-01-01 00:00:00</li>
+      </ul>
+    </article>
   </main>
   <aside>
     <section class="tags clearfix">
@@ -72,5 +66,24 @@
   </p>
 </footer>
 <script src="https://fugangqiang.github.io/mdblog.rs/static/main.js"></script>
+<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+       tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+       },
+       TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+       "HTML-CSS": {linebreaks: {automatic: true}},
+       SVG: {linebreaks: {automatic: true}}
+    });
+    MathJax.Hub.Queue(function() {
+       var all = MathJax.Hub.getAllJax(), i;
+       for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+       }
+    });
+</script>
 </body>
 </html>
