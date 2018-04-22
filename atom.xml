@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://fugangqiang.github.io/mdblog.rs</id>
   <title>Mdblog Demo Site</title>
-  <updated>2018-04-21T19:59:18+08:00</updated>
+  <updated>2018-04-22T12:51:31+08:00</updated>
   <subtitle>Simple is Beautiful!</subtitle>
   <icon>/static/favicon.png</icon>
   <logo>/static/logo.png</logo>
@@ -10,6 +10,44 @@
   <link rel="self" type="application/atom+xml" href="https://fugangqiang.github.io/mdblog.rs/atom.xml" />
   <generator uri="https://github.com/FuGangqiang/mdblog.rs">mdblog.rs</generator>
   <entry>
+    <id>https://fugangqiang.github.io/mdblog.rs/posts/how%20to%20create%20a%20new%20blog%20project.html</id>
+    <title>how to create a new blog project</title>
+    <updated>2018-04-22T12:31:00+08:00</updated>
+    <published>2018-04-22T12:31:00+08:00</published>
+    <link href="https://fugangqiang.github.io/mdblog.rs/posts/how%20to%20create%20a%20new%20blog%20project.html"/>
+    <summary>when you installed [`mdblog`][], you can use its subcommand `init` to initialize a new blog project....</summary>
+    <content type="html" xml:lang="en" xml:base="https://fugangqiang.github.io/mdblog.rs">
+        <![CDATA[
+        <p>when you installed <a href="https://crates.io/crates/mdblog"><code>mdblog</code></a>,
+you can use its subcommand <code>init</code> to initialize a new blog project.</p>
+<h2>init blog project</h2>
+<pre><code>mdblog init myblog
+</code></pre>
+<p>this command will create a new directory named <code>myblog</code> in the current directory,
+and initialize its directory layout as:</p>
+<pre><code>myblog
+├── config.toml
+├── media/
+├── posts/
+└── _themes/
+</code></pre>
+<ul>
+<li><code>config.toml</code>: blog project config file</li>
+<li><code>media</code>:  blog project media directory</li>
+<li><code>posts</code>: blog project markdown posts directory</li>
+<li><code>_themes</code>: blog project themes directory</li>
+</ul>
+<h2>check blog project</h2>
+<p>now you can run <code>serve</code> command in the blog project directory
+to check the web pages:</p>
+<pre><code>cd myblog
+mdblog serve
+</code></pre>
+<p>the web browser will be automatic opened at the blog index page.</p>
+
+        ]]>
+    </content>
+  </entry><entry>
     <id>https://fugangqiang.github.io/mdblog.rs/posts/introduction%20to%20mdblog.html</id>
     <title>introduction to mdblog</title>
     <updated>2018-03-28T23:48:56+08:00</updated>

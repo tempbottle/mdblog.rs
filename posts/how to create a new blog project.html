@@ -9,7 +9,7 @@
     .katex      { font-size: 1em !important; }
   </style>
 
-  <title>introduction to mdblog</title>
+  <title>how to create a new blog project</title>
 </head>
 <body>
 <header class="clearfix">
@@ -31,119 +31,38 @@
 </header>
 <div id="container" class="clearfix">
   <main>
-    <h1>introduction to mdblog</h1>
+    <h1>how to create a new blog project</h1>
     <article>
-      <h1>Mdblog</h1>
-<p><code>mdblog</code> is a static site generator from markdown files with features:</p>
-<ul>
-<li>TeX style math support</li>
-<li>file path is the post url</li>
-<li>file name is the post title</li>
-<li>post can be hidden(link does not be insert into index/tag page)</li>
-</ul>
-<h1>Install</h1>
-<p><code>mdblog</code> is implemented by rust language, so you need cargo command:</p>
-<pre><code>cargo install mdblog
+      <p>when you installed <a href="https://crates.io/crates/mdblog"><code>mdblog</code></a>,
+you can use its subcommand <code>init</code> to initialize a new blog project.</p>
+<h2>init blog project</h2>
+<pre><code>mdblog init myblog
 </code></pre>
-<p><code>mdblog</code> will be installed in your cargo binary directory(<code>~/.cargo/bin/</code>).</p>
-<h1>CLI</h1>
-<p><code>mdblog</code> can be use as a command:</p>
-<pre><code>$ mdblog -h
-static site generator from markdown files
-
-USAGE:
-    mdblog &lt;SUBCOMMAND&gt;
-
-FLAGS:
-    -h, --help       Prints help information
-    -V, --version    Prints version information
-
-SUBCOMMANDS:
-    build    Build the blog static files
-    help     Prints this message or the help of the given subcommand(s)
-    init     Initialize the blog directory layout
-    new      Create a blog post
-    serve    Serve the blog, rebuild on change
-    theme    Blog theme operations
-</code></pre>
-<p>you can also check the subcommand usage:</p>
-<pre><code>$ mdblog serve -h
-Serve the blog, rebuild on change
-
-USAGE:
-    mdblog serve [OPTIONS]
-
-FLAGS:
-    -h, --help       Prints help information
-    -V, --version    Prints version information
-
-OPTIONS:
-    -p, --port &lt;port&gt;    Serve the blog at http://127.0.0.1:&lt;port&gt; [default: 5000]
-</code></pre>
-<h3>init blog</h3>
-<pre><code>$ mdblog init myblog
-</code></pre>
-<p>blog directory(<code>myblog</code>) layout is initialized:</p>
+<p>this command will create a new directory named <code>myblog</code> in the current directory,
+and initialize its directory layout as:</p>
 <pre><code>myblog
 ├── config.toml
-├── media
-├── posts
-│   ├── hello.md
-│   └── math.md
-└── _themes
+├── media/
+├── posts/
+└── _themes/
 </code></pre>
 <ul>
-<li><code>config.toml</code>: blog config file</li>
-<li><code>media</code>: blog media directory</li>
-<li><code>posts</code>: blog posts directory</li>
-<li><code>posts/hello.md</code>: a markdown style post</li>
-<li><code>_themes</code>: blog themes directory</li>
+<li><code>config.toml</code>: blog project config file</li>
+<li><code>media</code>:  blog project media directory</li>
+<li><code>posts</code>: blog project markdown posts directory</li>
+<li><code>_themes</code>: blog project themes directory</li>
 </ul>
-<h3>build blog</h3>
-<pre><code>$ cd myblog
-$ mdblog build
+<h2>check blog project</h2>
+<p>now you can run <code>serve</code> command in the blog project directory
+to check the web pages:</p>
+<pre><code>cd myblog
+mdblog serve
 </code></pre>
-<p>the blog static files are build into the subdir <code>_build</code>, the current blog directory(<code>myblog</code>) layout is:</p>
-<pre><code>myblog
-├── config.toml
-├── media
-├── posts
-│   ├── hello.md
-│   └── math.md
-├── _themes
-└── _builds
-</code></pre>
-<ul>
-<li><code>_builds</code>: generated static-site top directory</li>
-</ul>
-<h3>serve blog</h3>
-<pre><code>$ mdblog serve
-</code></pre>
-<p>open the site index page automatically,
-and re-generate your static-site when you add or change content,</p>
-<h3>new post</h3>
-<p>create a new post titled <code>another</code>:</p>
-<pre><code>$ mdblog new another
-</code></pre>
-<p>a new markdown file <code>posts/another.md</code> is created,
-you can edit it for the new post.</p>
-<p>refresh the index page, you will find the new post.</p>
-<h1>config.toml</h1>
-<pre><code class="language-toml">site_url = &quot;&quot;
-site_name = &quot;Mdblog&quot;
-site_motto = &quot;Simple is Beautiful!&quot;
-footer_note = &quot;Keep It Simple, Stupid!&quot;
-media_dir = &quot;media&quot;
-build_dir = &quot;_build&quot;
-theme = &quot;simple&quot;
-theme_root_dir = &quot;_themes&quot;
-rebuild_interval = 2
-posts_per_page = 20
-</code></pre>
+<p>the web browser will be automatic opened at the blog index page.</p>
 
       <ul id="article_footer">
-        <li>tags: <a href="https://fugangqiang.github.io/mdblog.rs/tags/introduce.html">introduce<sup>1</sup></a></li>
-      <li>date: 2018-03-28 23:48:56</li>
+        <li>tags: <a href="https://fugangqiang.github.io/mdblog.rs/tags/tutorial.html">tutorial<sup>1</sup></a></li>
+      <li>date: 2018-04-22 12:31:00</li>
       </ul>
     </article>
   </main>
