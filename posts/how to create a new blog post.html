@@ -9,7 +9,7 @@
     .katex      { font-size: 1em !important; }
   </style>
 
-  <title>hello</title>
+  <title>how to create a new blog post</title>
 </head>
 <body>
 <header class="clearfix">
@@ -31,13 +31,55 @@
 </header>
 <div id="container" class="clearfix">
   <main>
-    <h1>hello</h1>
+    <h1>how to create a new blog post</h1>
     <article>
-      <p>hello world!</p>
+      <p>now you have a blog project created by <a href="https://crates.io/crates/mdblog">mdblog</a>,
+then you can use <code>new</code> subcommand to create a new bolg post.</p>
+<h2>new blog post</h2>
+<pre><code>mdblog new another
+</code></pre>
+<p><code>mdblog</code> will create a new post with path <code>posts/another.md</code>,
+you can also add blog tags to the new post using the <code>-t/--tag</code> argument:</p>
+<pre><code>mdblog new another -t test
+</code></pre>
+<h2>post title</h2>
+<p><code>mdblog</code> use the post filename as the post title,
+so <code>posts/another.md</code> blog post's title is <code>another</code>.</p>
+<h2>two parts</h2>
+<p>every bolg post have two parts splitted by the first blank line:</p>
+<ul>
+<li>headers</li>
+<li>body</li>
+</ul>
+<p>the <code>headers</code> part uses <a href="http://yaml.org">yaml</a> format, the body part uses <a href="http://commonmark.org">markdown</a> format.</p>
+<p>the <code>posts/another.md</code> file content automatic created by mdblog:</p>
+<pre><code>created: 2018-04-23T10:01:09+08:00
+tags: [test]
+
+this is a new post!
+</code></pre>
+<p>the post headers part is:</p>
+<pre><code>created: 2018-04-23T10:01:09+08:00
+tags: [test]
+</code></pre>
+<p>the post body part is:</p>
+<pre><code>this is a new post!
+</code></pre>
+<h3>headers part</h3>
+<p><code>headers</code> parts is the blog post metadata:</p>
+<ul>
+<li><code>created</code>: the post created time</li>
+<li><code>tags</code>: the post blog tags</li>
+<li><code>description</code>: the post description</li>
+<li><code>hidden</code>: the hidden flag</li>
+</ul>
+<h3>body part</h3>
+<p>the blog post content is converted by <code>mdblog</code> using body part,
+you can use any markdown grammar in the <code>body</code> part.</p>
 
       <ul id="article_footer">
-        <li>tags: <a href="https://fugangqiang.github.io/mdblog.rs/tags/hello.html">hello<sup>2</sup></a></li>
-      <li>date: 1970-01-01 00:00:00</li>
+        <li>tags: <a href="https://fugangqiang.github.io/mdblog.rs/tags/tutorial.html">tutorial<sup>2</sup></a></li>
+      <li>date: 2018-04-23 09:48:50</li>
       </ul>
     </article>
   </main>

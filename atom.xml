@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://fugangqiang.github.io/mdblog.rs</id>
   <title>Mdblog Demo Site</title>
-  <updated>2018-04-22T12:51:31+08:00</updated>
+  <updated>2018-04-23T11:00:21+08:00</updated>
   <subtitle>Simple is Beautiful!</subtitle>
   <icon>/static/favicon.png</icon>
   <logo>/static/logo.png</logo>
@@ -10,6 +10,61 @@
   <link rel="self" type="application/atom+xml" href="https://fugangqiang.github.io/mdblog.rs/atom.xml" />
   <generator uri="https://github.com/FuGangqiang/mdblog.rs">mdblog.rs</generator>
   <entry>
+    <id>https://fugangqiang.github.io/mdblog.rs/posts/how%20to%20create%20a%20new%20blog%20post.html</id>
+    <title>how to create a new blog post</title>
+    <updated>2018-04-23T09:48:50+08:00</updated>
+    <published>2018-04-23T09:48:50+08:00</published>
+    <link href="https://fugangqiang.github.io/mdblog.rs/posts/how%20to%20create%20a%20new%20blog%20post.html"/>
+    <summary>now you have a blog project created by [mdblog][], then you can use `new` subcommand to create a new bolg post....</summary>
+    <content type="html" xml:lang="en" xml:base="https://fugangqiang.github.io/mdblog.rs">
+        <![CDATA[
+        <p>now you have a blog project created by <a href="https://crates.io/crates/mdblog">mdblog</a>,
+then you can use <code>new</code> subcommand to create a new bolg post.</p>
+<h2>new blog post</h2>
+<pre><code>mdblog new another
+</code></pre>
+<p><code>mdblog</code> will create a new post with path <code>posts/another.md</code>,
+you can also add blog tags to the new post using the <code>-t/--tag</code> argument:</p>
+<pre><code>mdblog new another -t test
+</code></pre>
+<h2>post title</h2>
+<p><code>mdblog</code> use the post filename as the post title,
+so <code>posts/another.md</code> blog post's title is <code>another</code>.</p>
+<h2>two parts</h2>
+<p>every bolg post have two parts splitted by the first blank line:</p>
+<ul>
+<li>headers</li>
+<li>body</li>
+</ul>
+<p>the <code>headers</code> part uses <a href="http://yaml.org">yaml</a> format, the body part uses <a href="http://commonmark.org">markdown</a> format.</p>
+<p>the <code>posts/another.md</code> file content automatic created by mdblog:</p>
+<pre><code>created: 2018-04-23T10:01:09+08:00
+tags: [test]
+
+this is a new post!
+</code></pre>
+<p>the post headers part is:</p>
+<pre><code>created: 2018-04-23T10:01:09+08:00
+tags: [test]
+</code></pre>
+<p>the post body part is:</p>
+<pre><code>this is a new post!
+</code></pre>
+<h3>headers part</h3>
+<p><code>headers</code> parts is the blog post metadata:</p>
+<ul>
+<li><code>created</code>: the post created time</li>
+<li><code>tags</code>: the post blog tags</li>
+<li><code>description</code>: the post description</li>
+<li><code>hidden</code>: the hidden flag</li>
+</ul>
+<h3>body part</h3>
+<p>the blog post content is converted by <code>mdblog</code> using body part,
+you can use any markdown grammar in the <code>body</code> part.</p>
+
+        ]]>
+    </content>
+  </entry><entry>
     <id>https://fugangqiang.github.io/mdblog.rs/posts/how%20to%20create%20a%20new%20blog%20project.html</id>
     <title>how to create a new blog project</title>
     <updated>2018-04-22T12:31:00+08:00</updated>
@@ -37,11 +92,16 @@ and initialize its directory layout as:</p>
 <li><code>posts</code>: blog project markdown posts directory</li>
 <li><code>_themes</code>: blog project themes directory</li>
 </ul>
+<h2>run subcommand</h2>
+<p>every mdblog subcommand except <code>init</code> should be run in the top blog project directory.</p>
+<pre><code>cd myblog
+# mdblog subcommand
+</code></pre>
+<p><code>config.toml</code> must be existed in the top blog project directory.</p>
 <h2>check blog project</h2>
 <p>now you can run <code>serve</code> command in the blog project directory
 to check the web pages:</p>
-<pre><code>cd myblog
-mdblog serve
+<pre><code>mdblog serve
 </code></pre>
 <p>the web browser will be automatic opened at the blog index page.</p>
 
